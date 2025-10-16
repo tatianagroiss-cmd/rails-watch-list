@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
-  get 'movies/index'
-  get 'movies/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  #A user can see all the lists
-  #GET "lists"
+  #read all - the user can see all lists
   get "lists", to: "lists#index"
-  #A user can see the details of a given list and its name
-  #GET "lists/42"
-  #A user can create a new list
-  #GET "lists/new"
-  #POST "lists
+
+  #create - the user can create the list
+  get "lists/new", to: "lists#new"
+  post "lists", to: "lists#create"
+
+  #show - the user can see one list with details
+  get "lists/:id", to: "lists#show", as: :list
+
+
 
 
 
