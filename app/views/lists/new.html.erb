@@ -1,5 +1,10 @@
+<h1>Add your movie list here</h1>
+
 <%= form_with model: @list do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.submit %>
+  <%= f.submit "add" %>
 <% end %>
+
+<%= simple_form_for ([@list, @bookmark]) do |f| %>
+
