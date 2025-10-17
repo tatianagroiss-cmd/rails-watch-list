@@ -16,6 +16,7 @@ def create
 end
 
 def bookmark_params
+  require(:bookmark).permit(:comment)
 end
 
 end
